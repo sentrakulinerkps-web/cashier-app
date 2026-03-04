@@ -1,0 +1,186 @@
+/* ChinQue POS Custom Styles */
+
+/* Tab Content Styles */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Receipt Item Styling */
+.receipt-item {
+    border-left: 4px solid #3B82F6;
+    background: linear-gradient(to right, #f8fafc, #ffffff);
+    transition: all 0.2s ease;
+}
+
+.receipt-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Calculator Button Styling */
+.calc-btn {
+    transition: all 0.2s ease;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+}
+
+.calc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calc-btn:active {
+    transform: translateY(0);
+}
+
+/* Status Badges */
+.status-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-completed {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.status-delivery {
+    background-color: #dbeafe;
+    color: #3b82f6;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.order-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment Method Icons */
+.payment-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.payment-cash {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.payment-aba {
+    background-color: #dbeafe;
+    color: #3b82f6;
+}
+
+.payment-checker {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+/* Input Focus Styles */
+.input-focus:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Tool Card */
+.tool-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Notepad Lines */
+.notepad-line {
+    background: linear-gradient(to bottom, transparent 95%, #e5e7eb 95%);
+    background-size: 100% 2rem;
+    line-height: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .mobile-stack {
+        flex-direction: column;
+    }
+    
+    .mobile-full {
+        width: 100%;
+    }
+    
+    .mobile-text-center {
+        text-align: center;
+    }
+    
+    .order-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Print Styles for Receipt */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .receipt-print {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .dark\:bg-gray-900 {
+        background-color: #111827;
+    }
+    
+    .dark\:text-white {
+        color: white;
+    }
+    
+    .dark\:bg-gray-800 {
+        background-color: #1f2937;
+    }
+}
