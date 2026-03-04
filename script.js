@@ -1196,7 +1196,7 @@ function loadCompletedOrdersTable() {
                 <div class="text-sm text-gray-900">${order.items.length} items</div>
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm font-bold text-gray-900">៛ ${order.total.toLocaleString()}</div>
+                <div class="text-sm font-bold text-gray-900">៛ $៛ ${(order.total || 0).toLocaleString()}</div>
             </td>
             <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">${order.paymentMethod || 'cash'}</span>
